@@ -17,8 +17,7 @@ class StudentsController < ApplicationController
 
   def update
     find_student
-    @student = Student.update(params.require(:student).permit(:first_name, :last_name))
-
+    @student = Student.update(params[:student])
     redirect_to student_path(@student)
   end
 
