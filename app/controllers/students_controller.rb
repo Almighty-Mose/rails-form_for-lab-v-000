@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-
+    find_student
   end
 
   def create
@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    find_
+    find_student
   end
 
   private
