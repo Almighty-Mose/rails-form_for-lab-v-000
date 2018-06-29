@@ -1,3 +1,4 @@
+require 'pry'
 class StudentsController < ApplicationController
   def new
   end
@@ -17,6 +18,7 @@ class StudentsController < ApplicationController
 
   def update
     find_student
+    binding.pry
     @student = Student.update(pass_params)
     redirect_to student_path(@student)
   end
