@@ -18,10 +18,7 @@ class StudentsController < ApplicationController
 
   def update
     find_student
-    #binding.pry
-    @student.first_name = params[:student][:first_name]
-    @student.last_name = params[:student][:last_name]
-    @student.save
+    @student.update(pass_params)
 
     redirect_to student_path(@student)
   end
