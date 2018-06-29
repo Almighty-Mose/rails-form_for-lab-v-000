@@ -18,6 +18,8 @@ class SchoolClassesController < ApplicationController
   def update
     find_class
     @school_class.update(pass_params)
+
+    redirect_to school_class_path(@school_class)
   end
 
   def edit
