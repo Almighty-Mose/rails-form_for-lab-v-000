@@ -4,6 +4,6 @@ class CreateSchoolClasses < ActiveRecord::Migration
       t.string :title
       t.integer :room_number
 
-      t.timestamps :null, false
+      t.timestamps null: false
   end
 end
