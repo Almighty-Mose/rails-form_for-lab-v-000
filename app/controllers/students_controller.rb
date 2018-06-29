@@ -22,11 +22,12 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    find_
   end
 
   private
 
-  def find_class
+  def find_student
     @student = Student.find(params[:id])
   end
 
