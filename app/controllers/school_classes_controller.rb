@@ -16,6 +16,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def update
+    find_class
     @school_class.update(pass_params)
   end
 
