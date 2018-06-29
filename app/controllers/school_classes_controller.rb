@@ -16,12 +16,11 @@ class SchoolClassesController < ApplicationController
   end
 
   def update
+    @school_class.update(pass_params)
   end
 
   def edit
     find_class
-
-    @school_class.update(pass_params)
   end
 
   private
