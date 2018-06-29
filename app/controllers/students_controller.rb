@@ -6,6 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def show
+
   end
 
   def create
@@ -18,5 +19,15 @@ class StudentsController < ApplicationController
   end
 
   def edit
+  end
+
+  private
+
+  def find_class
+    @student = Student.find(params[:id])
+  end
+
+  def pass_params
+    params.require(:student).permit(:first_name, :last_name)
   end
 end
