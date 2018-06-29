@@ -21,7 +21,7 @@ class SchoolClassesController < ApplicationController
   def edit
     find_class
 
-    @school_class.update(params.require(:school_class).permit(:title, :room_number))
+    @school_class.update(pass_params)
   end
 
   private
