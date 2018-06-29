@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
 
   def update
     find_student
-    @student = Student.update(params[:student])
+    @student = Student.update(pass_params)
     redirect_to student_path(@student)
   end
 
